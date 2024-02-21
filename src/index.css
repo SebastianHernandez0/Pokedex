@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: pokemon;
+  
+}
+
+@font-face {
+  font-family: pokemon;
+  src: url(./assets/PokemonGb-RAeo.ttf);
+}
+
+h1,h2,h3,h4{
+  text-wrap: balance;
+}
+
+p{
+  text-wrap: pretty;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+	list-style: none;
+}
+
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 0, 0, 1) 20%,
+    rgba(255, 85, 85, 1) 47%,
+    rgba(255, 255, 255, 1) 92%
+  );
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  overflow-y: hidden scroll;
+}
+
+.layout__navbar{
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navbar__nav{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.layout__navbar img{
+  width: 300px;
+}
+  
+.navbar__span{
+  border-bottom: 5px solid;
+  border-image-slice:1 ;
+  border-image-source: linear-gradient(to left, #ffffff, #000000);
+  width: 50%;
+}
+
+.layout__home{
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+
+.layout__home h1{
+  font-size: 2rem;
+  letter-spacing: 5px;
+  padding: 2rem;
+  text-shadow: 1px 2px 5px white, 3px 4px 5px white;
+}
+
+.layout__home img{
+  width: 35%;
+}
+
+.layout__genera{
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgb(255, 48, 48) 32%,
+    rgba(255, 85, 85, 1) 62%,
+    rgba(255, 255, 255, 1) 99%
+  );
+  
+  
+}
+
+.genera__cards{
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.cards__card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards__card img{
+  width: 300px;
+  height: 300px;
+}
+.cards__card h2{
+  line-height: 3rem;
+}
+
+.pokemon__cards{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.pokemon__card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+}
