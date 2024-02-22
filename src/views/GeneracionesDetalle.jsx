@@ -1,15 +1,16 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 export default function GeneracionesDetalle() {
   const { gen } = useParams();
   const [generacion, setGeneracion] = useState([]);
-  const [pokemon, setPokemon] = useState([]);
+  const Genera= gen;
+  
 
   var url = "";
   var i=0
   if (gen === "1") {
     url = "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=151";
-    i=1
+    i=0
   }else if (gen === "2") {
     url = "https://pokeapi.co/api/v2/pokemon/?offset=151&limit=100";
     i=151
@@ -46,17 +47,19 @@ export default function GeneracionesDetalle() {
     getApiData();
   }, [gen]);
 
-  
+  const navigate= useNavigate()
+  const detallePokemon= (name)=>{
+    navigate(`/generaciones/${Genera}/${name}`)
+  }
   return(
     <div className="pokemon__cards">
-        
         {generacion.map((pokemon)=>{
             return(
                 
 
                 <div className="pokemon__card" key={i}>
-                <h2>{i++}:{pokemon.name}</h2>
-                <img src={"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/"+i+".png"}></img>
+                <h2><span style={{display:"none"}}>{i++}</span>{i}: {pokemon.name}</h2>
+                <img onClick={()=> detallePokemon(pokemon.name)} src={"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/"+i+".png"}></img>
                 
                 </div>
                 

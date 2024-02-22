@@ -30,12 +30,14 @@ ul {
 
 body {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background: linear-gradient(
     180deg,
     rgba(255, 0, 0, 1) 20%,
     rgba(255, 85, 85, 1) 47%,
-    rgba(255, 255, 255, 1) 92%
+    rgb(255, 174, 174) 62%,
+    rgb(255, 224, 224) 82%,
+    rgb(255, 255, 255) 92%
   );
   background-repeat: no-repeat;
   overflow-x: hidden;
@@ -92,14 +94,6 @@ body {
   margin-top: 2rem;
   display: flex;
   justify-content: center;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 0, 0, 1) 0%,
-    rgb(255, 48, 48) 32%,
-    rgba(255, 85, 85, 1) 62%,
-    rgba(255, 255, 255, 1) 99%
-  );
-  
   
 }
 
@@ -115,11 +109,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 }
 
 .cards__card img{
   width: 300px;
   height: 300px;
+  cursor: pointer;
+  border: 5px solid white;
 }
 .cards__card h2{
   line-height: 3rem;
@@ -136,7 +133,32 @@ body {
 
 .pokemon__card{
   display: flex;
+  gap: 2rem;
   flex-direction: column;
   align-items: center;
   margin-top: 5rem;
+}
+
+.pokemon__card img{
+  width: 200px;
+  cursor: pointer;
+}
+
+.pokemon__search{
+  position: absolute;
+  padding: 0.5rem;
+}
+.pokemon__detalle{
+  margin-top: 5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+}
+
+.pokemon__detalle img{
+  width: 500px;
 }
