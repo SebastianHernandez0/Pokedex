@@ -159,6 +159,48 @@ body {
 
 }
 
-.pokemon__detalle img{
+.detalle__img{
   width: 500px;
 }
+
+.pokemon__detalle h1 {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+.detalle__span{
+  display: none;
+  border: 1px solid black;
+  padding: 1rem;
+  background-color: white;
+  font-size: 1rem;
+  text-shadow: 0px 0px 1px red;
+  position: absolute;
+  top: 20%;
+}
+
+.detalle__icon{
+  width: 3.5rem;
+}
+
+.detalle__icon:hover{
+  cursor: pointer;
+}
+
+.detalle__tipodiv:hover .detalle__span{
+  
+  display: block;
+  
+}
+
+
+.detalle__tipos{
+  display: flex;
+  gap: 0.5rem
+  ;
+}
+
