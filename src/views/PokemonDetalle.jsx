@@ -89,6 +89,7 @@ export default function PokemonDetalle() {
 
   return (
     <div className="pokemon__detalle">
+      <button onClick={volver} className="detalle__btn">Volver a la Pokedex</button>
       <div className="detalle__div">
         <h1>
           {pokemon.name}:{" "}
@@ -115,7 +116,7 @@ export default function PokemonDetalle() {
           ))}
         </ul>
       </div>
-      <button onClick={volver} className="detalle__btn">Volver a la Pokedex</button>
+      
     </div>
   );
 }
